@@ -1,0 +1,17 @@
+# ============================
+# Ejemplo interactivo - Modus Ponens
+# Regla: Si P -> Q
+# ============================
+
+print("=== Modus Ponens ===")
+print("Regla: Si P -> Q")
+print("Ejemplo: Si llueve (P), entonces la calle se moja (Q).\n")
+
+# Entrada del usuario
+p = input("¿Es verdadero P (sí/no)? ").strip().lower()
+
+if p == "sí" or p == "si":
+    print("Dado que P es verdadero y la regla P -> Q existe...")
+    print("Conclusión: Q es verdadero.")
+else:
+    print("No se puede concluir nada porque P no es verdadero.")

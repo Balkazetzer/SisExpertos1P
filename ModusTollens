@@ -1,0 +1,17 @@
+# ============================
+# Ejemplo interactivo - Modus Tollens
+# Regla: Si P -> Q
+# ============================
+
+print("=== Modus Tollens ===")
+print("Regla: Si P -> Q")
+print("Ejemplo: Si llueve (P), entonces la calle se moja (Q).\n")
+
+# Entrada del usuario
+no_q = input("¿Es falso Q (sí/no)? ").strip().lower()
+
+if no_q == "sí" or no_q == "si":
+    print("Dado que Q es falso y la regla P -> Q existe...")
+    print("Conclusión: P es falso.")
+else:
+    print("No se puede concluir nada porque Q no es falso.")
