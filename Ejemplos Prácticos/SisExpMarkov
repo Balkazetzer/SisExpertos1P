@@ -1,0 +1,44 @@
+# =========================
+# SISTEMA EXPERTO: Limpieza del Hogar
+# =========================
+
+def motor_inferencia(estado):
+    """
+    Motor de inferencia que recomienda acciones de limpieza
+    según el estado del hogar.
+    """
+    reglas = {
+        "piso sucio": "Debes barrer y trapear el piso.",
+        "ventanas sucias": "Debes limpiar las ventanas con un trapo húmedo.",
+        "ropa acumulada": "Debes lavar la ropa y doblarla.",
+        "trastes sucios": "Debes lavar los trastes.",
+        "baño sucio": "Debes limpiar el baño con desinfectante.",
+        "todo limpio": "No es necesario limpiar ahora, puedes descansar."
+    }
+    return reglas.get(estado, "No tengo una recomendación para ese estado.")
+
+
+def consultar_sistema():
+    """
+    Interfaz de consulta del sistema experto.
+    """
+    print("=== SISTEMA EXPERTO DE LIMPIEZA DEL HOGAR ===")
+    print("Puedes consultar el estado de tu casa y recibir recomendaciones.")
+    print("Ejemplos de consulta: piso sucio, ventanas sucias, ropa acumulada, trastes sucios, baño sucio, todo limpio")
+    print("Escribe 'salir' para terminar.\n")
+
+    while True:
+        estado = input("Describe el estado de la casa: ").lower()
+        if estado == "salir":
+            print("Saliendo del sistema experto. ¡Tu casa estará impecable!")
+            break
+        recomendacion = motor_inferencia(estado)
+        print(f"Recomendación: {recomendacion}\n")
+
+
+# -------------------
+# EJECUCIÓN
+# -------------------
+if __name_
+_ == "__main__":
+    consultar_sistema()
